@@ -1,0 +1,22 @@
+@model ProductCatalogMVC.Models.Product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<p><strong>Product ID:</strong> @Model.Id</p>
+<p><strong>Product Name:</strong> @Model.Name</p>
+<p><strong>Price:</strong> ₹@Model.Price.ToString("0")</p>
+<p><strong>Category:</strong> @Model.Category</p>
+
+<p>
+    @Html.ActionLink(
+        "Back to Product List",
+        "Index",
+        "Product",
+        null,
+        new { @class = "btn btn-primary" }
+    )
+</p>
